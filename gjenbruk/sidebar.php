@@ -27,9 +27,13 @@
                 Majorstuhuset Legegruppe<br />
                 Kirkeveien 64B, 4. etg.<br />
                 OBS: Inngang til oss er i B-inngangen, rett ved siden av Krogh optikk og Kverneriet.<br />
-                <br /><br />
-                <a href="http://maps.google.no/maps?hl=no&q=majorstuhuset%20legegruppe&gs_sm=e&gs_upl=985l3813l0l3953l24l19l0l9l9l0l297l1327l0.4.3l7l0&bav=on.2,or.r_gc.r_pw.,cf.osb&biw=1024&bih=571&wrapid=tlif132851934040411&um=1&ie=UTF-8&sa=N&tab=wl" title="Klikk her for å se kart" target="_blank">Vis kart</a>
-            </p>
+                <br /><br /></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.1803209370744!2d10.712663016096625!3d59.92914998187272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416ddaf92a58b7%3A0x14909a9a78ba639b!2sMajorstuhuset%20Legegruppe%20DA!5e0!3m2!1sno!2sno!4v1682011595469!5m2!1sno!2sno" 
+                     width="200" height="200" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </div>
+        <div class="map">
+        
         </div>
     <!-- SMS order -->
     </div>

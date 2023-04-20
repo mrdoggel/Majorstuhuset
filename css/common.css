@@ -187,3 +187,10 @@ button.submit.loading {
     margin: 0;
     clip: auto;
 }
+
+#ansatteDiv {
+    display: none;
+}
+#bestillingDiv {
+    display: none;
+}

@@ -4,16 +4,16 @@
         <span class="close-menu">Skjul meny</span>
     </button>
     <ul>
-        <li ><a href="">Hjem</a></li>
-        <li class="active"><a href="ansatte">Ansatte</a></li>
-        <li ><a href="bestillinger">Slik bestiller/avbestiller du</a></li>
-        <li ><a href="informasjon">Aktuelt</a></li>
+        <li class="active"><a id="hjem">Hjem</a></li>
+        <li><a id="ansatte">Ansatte</a></li>
+        <li><a id="bestilling">Slik bestiller/avbestiller du</a></li>
+        <li><a id="aktuelt">Aktuelt</a></li>
         <li class="more"><a href="#" class="more-trigger">Mer</a>
             <ul>
-                <li ><a href="">Hjem</a></li>
-                <li class="active"><a href="ansatte">Ansatte</a></li>
-                <li ><a href="bestillinger">Slik bestiller/avbestiller du</a></li>
-                <li ><a href="informasjon">Aktuelt</a></li>
+                <li class="active" id="hjem"><a>Hjem</a></li>
+                <li id="ansatte"><a>Ansatte</a></li>
+                <li id="bestilling"><a>Slik bestiller/avbestiller du</a></li>
+                <li id="aktuelt"><a>Aktuelt</a></li>
             </ul>
         </li>
     </ul>
