@@ -1,0 +1,189 @@
+/* Buttons */
+.choice-button {
+    color: #fff;
+    padding: 7px 25px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+}
+
+.choice-button:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.choice-button.helserespons {
+    border: 2px solid #c7503c;
+    background-color: #c7503c;
+    padding-right: 52px;
+    background-size: auto 16px;
+    background-image: url(/web/gfx/helserespons.png);
+}
+
+.choice-button.helsenorge {
+    border-color: #a61e7b;
+    background-color: #a61e7b;
+    border-radius: 22px;
+    padding-right: 47px;
+    background-size: auto 12px;
+    background-image: url(/web/gfx/lock.png);
+}
+
+.loading-spinner {
+    background-size: 50px 50px;
+    background-image: url(/web/gfx/ring-loader.svg);
+    width: 50px;
+    height: 50px;
+}
+
+#custom-form-wrapper .form-field {
+    margin-bottom: 15px;
+}
+
+#custom-form-wrapper .form-field label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#custom-form-wrapper .form-field label.choice-label {
+    font-weight: normal;
+    display: table;
+}
+
+#custom-form-wrapper .form-field label.choice-label.boolean {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#custom-form-wrapper .form-field .field-description {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+#custom-form-wrapper .form-field input[type='text'],
+#custom-form-wrapper .form-field input[type='tel'],
+#custom-form-wrapper .form-field textarea {
+    padding: 7px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: #555;
+    width: 360px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#custom-form-wrapper .form-field textarea {
+    resize: none;
+    font-family: inherit;
+}
+
+#custom-form-wrapper .form-field .field-error {
+    font-size: 14px;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+#custom-form-wrapper .pin-form .back-button {
+    border: 2px solid #0386ae;
+    background: none;
+    margin-bottom: 15px;
+    color: #0386ae;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+#custom-form-wrapper .pin-form .back-button span {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#custom-form-wrapper .pin-form table {
+    border: 1px solid #ccc;
+    padding: 10px;
+    line-height: 130%;
+}
+
+#custom-form-wrapper .pin-form table tr td {
+    padding-bottom: 10px;
+}
+
+#custom-form-wrapper .pin-form table tr td:first-of-type {
+    padding-right: 30px;
+}
+
+#custom-form-wrapper .pin-form table tr td.multi-lined {
+    white-space: pre-wrap;
+}
+
+#custom-form-wrapper .pin-form .form-field .pin-input {
+    width: 100px;
+    font-size: 24px;
+    font-family: monospace;
+    letter-spacing: 5px;
+    padding: 5px 10px;
+}
+
+button.submit {
+    background-color: white;
+    border: 2px solid #4175c1;
+    color: #4175c1;
+    transition: box-shadow 0.4s ease, background-color 0.4s ease, color 0.4s ease, padding 200ms ease;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0px;
+    padding: 10px 18px;
+    font-size: 18px;
+    line-height: 1.33;
+    display: block;
+    cursor: pointer;
+}
+
+button.submit:hover,
+button.submit:focus,
+button.submit:active {
+    background-color: #4175c1;
+    border-color: #4175c1;
+    color: white;
+}
+
+button.submit.loading {
+    background-color: white;
+    border-color: #4175c1;
+    color: #4175c1;
+    background-size: 30px 30px;
+    background-image: url(/web/gfx/ring-loader.svg);
+    background-repeat: no-repeat;
+    background-position: center right 18px;
+    padding-right: 66px;
+}
+
+.form-error {
+    color: red;
+    margin-top: 15px;
+}
+
+.show-on-focus {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.show-on-focus:focus {
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+}
