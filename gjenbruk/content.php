@@ -1,17 +1,5 @@
 <div class="content" id="start-of-content">
-    <!-- Appointment booking -->
     
-    <!-- Internet order -->
-    
-    <!-- Prescription -->
-    
-    <!-- Other requests -->
-    
-    <!-- Econsultation -->
-    
-    <!-- Custom form -->
-    
-    <!-- Show template -->
     <h1>Ansatte</h1>
     <div class="ansatt">
         <div class="bilde">
