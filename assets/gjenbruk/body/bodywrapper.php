@@ -1,3 +1,6 @@
+<?php
+    require "bodycontent/popups.php";
+?>
 <!-- Start container -->
 <div class="container">
     <?php

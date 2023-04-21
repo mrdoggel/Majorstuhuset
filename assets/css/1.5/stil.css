@@ -361,8 +361,36 @@ fieldset {
     position: absolute;
 }
 
+.blur {
+    filter: blur(3px);
+}
+
 form {
     display: inline;
+}
+
+.addContainerContainer,
+.addContainerContainerAktuelt,
+.addContainerContainerAnsatte,
+.addContainerContainerBestilling {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.addContainer,
+.addContainerAktuelt,
+.addContainerAnsatte,
+.addContainerBestilling {
+    display: none;
+    position: fixed;
+    background: white;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 10px;
 }
 
 .knapper {
@@ -371,14 +399,58 @@ form {
     margin-bottom: 10px;
 }
 
+.addknapper {
+    width: 100%;
+    text-align: center;
+}
+
+.add {
+    height: 35px;
+    width: 70px;
+    background: none;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.add .inside {
+    height: 25px;
+    width: 60px;
+    background: url(../../gfx/1.5/icons/add.png) no-repeat;
+    background-size: 25px;
+    background-position: center;
+    padding: 5px;
+}
+
+.add .inside:hover {
+    background: url(../../gfx/1.5/icons/add.gif) no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+
 .oppdaterHjem, 
-.oppdater, 
+.oppdaterAnsatte,
+.oppdaterBestilling,
+.oppdaterAktuelt, 
 .slettHjem, 
-.slett, 
+.slettAnsatte,
+.slettBestilling,
+.slettAktuelt,
+.slettAnsatteBilde,
 .avbrytHjem, 
-.avbryt, 
+.avbrytAnsatte,
+.avbrytBestilling,
+.avbrytAktuelt, 
 .submitHjem, 
-.submit {
+.submitAnsatte,
+.submitBestilling,
+.submitAktuelt,
+#avbrytHjemAdd,
+#avbrytAktueltAdd,
+#avbrytAnsatteAdd,
+#avbrytBestillingAdd {
     display: inline;
     height: 35px;
     width: 35px;
@@ -388,7 +460,9 @@ form {
 }
 
 .oppdaterHjem .inside, 
-.oppdater .inside {
+.oppdaterAnsatte .inside,
+.oppdaterBestilling .inside,
+.oppdaterAktuelt .inside {
     height: 25px;
     width: 25px;
     background: url(../../gfx/1.5/icons/edit.png) no-repeat;
@@ -398,7 +472,9 @@ form {
 }
 
 .oppdaterHjem .inside:hover, 
-.oppdater .inside:hover {
+.oppdaterAnsatte .inside:hover,
+.oppdaterBestilling .inside:hover,
+.oppdaterAktuelt .inside:hover {
     background: url(../../gfx/1.5/icons/edit.gif) no-repeat;
     background-size: 25px;
     background-position: center;
@@ -406,7 +482,10 @@ form {
 }
 
 .slettHjem .inside, 
-.slett .inside {
+.slettAnsatte .inside,
+.slettAnsatteBilde .inside,
+.slettBestilling .inside,
+.slettAktuelt .inside {
     height: 25px;
     width: 25px;
     background: url(../../gfx/1.5/icons/delete.png) no-repeat;
@@ -416,7 +495,10 @@ form {
 }
 
 .slettHjem .inside:hover, 
-.slett .inside:hover {
+.slettAnsatte .inside:hover, 
+.slettAnsatteBilde .inside:hover,
+.slettBestilling .inside:hover,
+.slettAktuelt .inside:hover {
     background: url(../../gfx/1.5/icons/delete.gif) no-repeat;
     background-size: 25px;
     background-position: center;
@@ -424,7 +506,13 @@ form {
 }
 
 .avbrytHjem .inside, 
-.avbryt .inside {
+.avbrytAnsatte .inside,
+.avbrytBestilling .inside,
+.avbrytAktuelt .inside,
+#avbrytHjemAdd .inside,
+#avbrytAktueltAdd .inside,
+#avbrytAnsatteAdd .inside,
+#avbrytBestillingAdd .inside {
     height: 25px;
     width: 25px;
     background: url(../../gfx/1.5/icons/abort.png) no-repeat;
@@ -434,15 +522,23 @@ form {
 }
 
 .avbrytHjem .inside:hover, 
-.avbryt .inside:hover {
+.avbrytAnsatte .inside:hover,
+.avbrytBestilling .inside:hover,
+.avbrytAktuelt .inside:hover,
+#avbrytHjemAdd .inside:hover,
+#avbrytAktueltAdd .inside:hover,
+#avbrytAnsatteAdd .inside:hover,
+#avbrytBestillingAdd .inside:hover {
     background: url(../../gfx/1.5/icons/abort.gif) no-repeat;
     background-size: 25px;
     background-position: center;
     cursor: pointer;
 }
 
-.submitHjem .inside, 
-.submit .inside {
+.submitHjem .inside,
+.submitAnsatte .inside,
+.submitBestilling .inside,
+.submitAktuelt .inside {
     height: 25px;
     width: 25px;
     background: url(../../gfx/1.5/icons/confirm.png) no-repeat;
@@ -452,7 +548,9 @@ form {
 }
 
 .submitHjem .inside:hover, 
-.submit .inside:hover {
+.submitAnsatte .inside:hover,
+.submitBestilling .inside:hover,
+.submitAktuelt .inside:hover {
     background: url(../../gfx/1.5/icons/confirm.gif) no-repeat;
     background-size: 25px;
     background-position: center;

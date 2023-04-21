@@ -9,11 +9,195 @@ var aktueltDiv = document.getElementById("aktueltDiv");
 var aktuelle = document.getElementsByClassName("aktuelt");
 var oppdaterHjemKnapper = document.getElementsByClassName("oppdaterHjem");
 var avbrytHjemKnapper = document.getElementsByClassName("avbrytHjem");
+var oppdaterAktueltKnapper = document.getElementsByClassName("oppdaterAktuelt");
+var avbrytAktueltKnapper = document.getElementsByClassName("avbrytAktuelt");
+var oppdaterAnsatteKnapper = document.getElementsByClassName("oppdaterAnsatte");
+var avbrytAnsatteKnapper = document.getElementsByClassName("avbrytAnsatte");
+var oppdaterBestillingKnapper = document.getElementsByClassName("oppdaterBestilling");
+var avbrytBestillingKnapper = document.getElementsByClassName("avbrytBestilling");
+var avbrytHjemAdd = document.getElementById("avbrytHjemAdd");
+var addHjem = document.getElementById("addHjem");
+var avbrytAktueltAdd = document.getElementById("avbrytAktueltAdd");
+var addAktuelt = document.getElementById("addAktuelt");
+var avbrytAnsatteAdd = document.getElementById("avbrytAnsatteAdd");
+var addAnsatte = document.getElementById("addAnsatte");
+var avbrytBestillingAdd = document.getElementById("avbrytBestillingAdd");
+var addBestilling = document.getElementById("addBestilling");
+var footerfooter = document.getElementsByClassName("footerfooter");
+
+footerfooter[0].addEventListener("click", function(){
+    alert("yep")
+});
+
+addAnsatte.addEventListener("click", function(){
+    document.getElementsByClassName("addContainerAnsatte")[0].style.display = "block";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].getAttribute("id") != "noblur") {
+            divs[i].classList.add("blur");
+        }
+    }
+});
+
+avbrytAnsatteAdd.addEventListener("click", function(){
+    document.getElementsByClassName("addContainerAnsatte")[0].style.display = "none";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.remove("blur");
+    }
+});
+
+addBestilling.addEventListener("click", function(){
+    document.getElementsByClassName("addContainerBestilling")[0].style.display = "block";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].getAttribute("id") != "noblur") {
+            divs[i].classList.add("blur");
+        }
+    }
+});
+
+avbrytBestillingAdd.addEventListener("click", function(){
+    document.getElementsByClassName("addContainerBestilling")[0].style.display = "none";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.remove("blur");
+    }
+});
+
+addAktuelt.addEventListener("click", function(){
+    document.getElementsByClassName("addContainerAktuelt")[0].style.display = "block";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].getAttribute("id") != "noblur") {
+            divs[i].classList.add("blur");
+        }
+    }
+});
+
+avbrytAktueltAdd.addEventListener("click", function(){
+    document.getElementsByClassName("addContainerAktuelt")[0].style.display = "none";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.remove("blur");
+    }
+});
+
+addHjem.addEventListener("click", function(){
+    document.getElementsByClassName("addContainer")[0].style.display = "block";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].getAttribute("id") != "noblur") {
+            divs[i].classList.add("blur");
+        }
+    }
+});
+
+avbrytHjemAdd.addEventListener("click", function(){
+    document.getElementsByClassName("addContainer")[0].style.display = "none";
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.remove("blur");
+    }
+});
+
+for (let i = 0; i < oppdaterBestillingKnapper.length; i++) {
+    oppdaterBestillingKnapper[i].addEventListener("click", function(){
+        var bestilling_innlegg_id = "bestilling_innlegg_";
+        var bestilling_edit_id = "bestilling_edit_";
+        bestilling_innlegg_id += oppdaterBestillingKnapper[i].getAttribute("name");
+        bestilling_edit_id += oppdaterBestillingKnapper[i].getAttribute("name");
+        let innlegg = document.getElementById(bestilling_innlegg_id);
+        let edit = document.getElementById(bestilling_edit_id);
+        console.log(innlegg)
+        console.log(innlegg.getElementsByTagName("H2")[0])
+        let height1 = innlegg.getElementsByTagName("H2")[0].clientHeight;
+        let height2 = innlegg.getElementsByTagName("P")[0].clientHeight;
+        innlegg.style.display = "none";
+        edit.style.display = "block";
+        edit.getElementsByTagName("textarea")[0].style.height = height1 + "px";
+        edit.getElementsByTagName("textarea")[1].style.height = height2 + "px";
+    });
+}
+
+for (let i = 0; i < avbrytBestillingKnapper.length; i++) {
+    avbrytBestillingKnapper[i].addEventListener("click", function(){
+        var bestilling_innlegg_id = "bestilling_innlegg_";
+        var bestilling_edit_id = "bestilling_edit_";
+        bestilling_edit_id += avbrytBestillingKnapper[i].getAttribute("name");
+        bestilling_innlegg_id += oppdaterBestillingKnapper[i].getAttribute("name");
+        document.getElementById(bestilling_edit_id).style.display = "none";
+        document.getElementById(bestilling_innlegg_id).style.display = "block";
+    });
+}
+
+for (let i = 0; i < oppdaterAnsatteKnapper.length; i++) {
+    oppdaterAnsatteKnapper[i].addEventListener("click", function(){
+        var ansatte_innlegg_id = "ansatte_innlegg_";
+        var ansatte_edit_id = "ansatte_edit_";
+        ansatte_innlegg_id += oppdaterAnsatteKnapper[i].getAttribute("name");
+        ansatte_edit_id += oppdaterAnsatteKnapper[i].getAttribute("name");
+        let innlegg = document.getElementById(ansatte_innlegg_id);
+        let edit = document.getElementById(ansatte_edit_id);
+        let height1 = innlegg.getElementsByTagName("H2")[0].clientHeight;
+        let height2 = innlegg.getElementsByTagName("P")[0].clientHeight;
+        let height3 = innlegg.getElementsByTagName("P")[1].clientHeight;
+        console.log(innlegg.firstElementChild.firstElementChild)
+        console.log(innlegg.getElementsByTagName("P")[1])
+        innlegg.style.display = "none";
+        edit.style.display = "block";
+        edit.getElementsByTagName("textarea")[0].style.height = height1 + "px";
+        edit.getElementsByTagName("textarea")[1].style.height = height2 + "px";
+        edit.getElementsByTagName("textarea")[2].style.height = height3 + "px";
+    });
+}
+
+for (let i = 0; i < avbrytAnsatteKnapper.length; i++) {
+    avbrytAnsatteKnapper[i].addEventListener("click", function(){
+        var ansatte_innlegg_id = "ansatte_innlegg_";
+        var ansatte_edit_id = "ansatte_edit_";
+        ansatte_edit_id += avbrytAnsatteKnapper[i].getAttribute("name");
+        ansatte_innlegg_id += oppdaterAnsatteKnapper[i].getAttribute("name");
+        document.getElementById(ansatte_innlegg_id).style.display = "block";
+        document.getElementById(ansatte_edit_id).style.display = "none";
+    });
+}
+
+for (let i = 0; i < oppdaterAktueltKnapper.length; i++) {
+    oppdaterAktueltKnapper[i].addEventListener("click", function(){
+        var aktuelt_innlegg_id = "aktuelt_innlegg_";
+        var aktuelt_edit_id = "aktuelt_edit_";
+        aktuelt_innlegg_id += oppdaterAktueltKnapper[i].getAttribute("name");
+        aktuelt_edit_id += oppdaterAktueltKnapper[i].getAttribute("name");
+        let innlegg = document.getElementById(aktuelt_innlegg_id);
+        let edit = document.getElementById(aktuelt_edit_id);
+        let height1 = innlegg.firstElementChild.clientHeight;
+        let height2 = innlegg.getElementsByTagName("P")[1].clientHeight;
+        console.log(innlegg.firstElementChild)
+        console.log(innlegg.getElementsByTagName("P")[1])
+        innlegg.style.display = "none";
+        edit.style.display = "block";
+        edit.getElementsByTagName("textarea")[0].style.height = height1 + "px";
+        edit.getElementsByTagName("textarea")[1].style.height = height2 + "px";
+        
+    });
+}
+
+for (let i = 0; i < avbrytAktueltKnapper.length; i++) {
+    avbrytAktueltKnapper[i].addEventListener("click", function(){
+        var aktuelt_innlegg_id = "aktuelt_innlegg_";
+        var aktuelt_edit_id = "aktuelt_edit_";
+        aktuelt_edit_id += avbrytAktueltKnapper[i].getAttribute("name");
+        aktuelt_innlegg_id += oppdaterAktueltKnapper[i].getAttribute("name");
+        document.getElementById(aktuelt_innlegg_id).style.display = "block";
+        document.getElementById(aktuelt_edit_id).style.display = "none";
+    });
+}
 
 for (let i = 0; i < oppdaterHjemKnapper.length; i++) {
     oppdaterHjemKnapper[i].addEventListener("click", function(){
         var hjem_innlegg_id = "hjem_innlegg_";
-        var hjem_edit_id = "hjem_edit_"
+        var hjem_edit_id = "hjem_edit_";
         hjem_innlegg_id += oppdaterHjemKnapper[i].getAttribute("name");
         hjem_edit_id += oppdaterHjemKnapper[i].getAttribute("name");
         let innlegg = document.getElementById(hjem_innlegg_id);
@@ -31,7 +215,7 @@ for (let i = 0; i < oppdaterHjemKnapper.length; i++) {
 for (let i = 0; i < avbrytHjemKnapper.length; i++) {
     avbrytHjemKnapper[i].addEventListener("click", function(){
         var hjem_innlegg_id = "hjem_innlegg_";
-        var hjem_edit_id = "hjem_edit_"
+        var hjem_edit_id = "hjem_edit_";
         hjem_edit_id += avbrytHjemKnapper[i].getAttribute("name");
         hjem_innlegg_id += oppdaterHjemKnapper[i].getAttribute("name");
         document.getElementById(hjem_innlegg_id).style.display = "block";
