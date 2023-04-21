@@ -1,4 +1,6 @@
-<div class="navigation">
+<div class="navigation" id="navbarFiller">
+</div>
+<div class="navigation" id="navbar">
     <button class="mobile-nav-button">
         <span class="open-menu">Vis meny</span>
         <span class="close-menu">Skjul meny</span>

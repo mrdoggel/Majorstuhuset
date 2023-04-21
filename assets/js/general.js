@@ -28,7 +28,7 @@ $(document).ready(function(){
 		$('.navigation ul').slideToggle();
 	});
 
-  $('a.skip-to-start-of-content').attr('href', window.location.pathname + window.location.search + '#start-of-content');
+  //$('a.skip-to-start-of-content').attr('href', window.location.pathname + window.location.search + '#start-of-content');
 
   $('li.dropdown ul.dropdown-menu li:last-child a').on('keydown', function(e){
     if(e.key === 'Tab' && !e.shiftKey){
